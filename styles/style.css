@@ -1,0 +1,298 @@
+body {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    max-width: 100%;
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+    justify-content: center;
+}
+
+/* Code van https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video */
+video {
+    max-width: 60%;
+    margin: 1em 1em 1em 1em;
+}
+
+video {
+    justify-content: center;
+    text-align: center;
+}
+
+ul {
+    text-align: center;
+    list-style-position: inside;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 2em 1em 1em 1em;
+}
+
+/* https://stackoverflow.com/questions/11637978/html5-nav-element-inside-footer */
+footer nav ul li {
+    margin-bottom: 2em;
+}
+
+nav ul li a {
+    background-color: rgb(200, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    padding: 0.5em 1.2em 0.5em 1.2em;
+    font-size: 20px;
+    text-align: center;
+    margin: 1em 0.5em 1em 0.5em;
+    cursor: pointer;
+    height: 16px;
+    text-decoration: none;
+    transition: ease-in 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgb(255, 166, 2);
+    color: black;
+}
+
+nav ul li:hover {
+    transform: translateY(-10px);
+}
+
+nav ul li a:active {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+article {
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(200, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 0.5em double #ffffff;
+    border-radius: 10px;
+    border-width: 0.5em;
+    padding: 1em 1em 1em 1em;
+    font-size: 17px;
+    margin: auto;
+    max-width: 40em;
+}
+
+.gallery figure {
+    max-height: fit-content;
+    max-width: 25%;
+    margin: 2em 2em 2em 2em;
+}
+
+/* Code van https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section figure {
+    margin: 2em 2em 2em 2em;
+    max-width: 250px;
+    max-height: fit-content;
+}
+
+/* Code van https://css-tricks.com/forums/topic/flexbox-skip-first-item/ */
+section h2 {
+    flex: 0 0 98%;
+}
+
+section a img {
+    max-width: 8vw;
+    margin: 1em 2em 1em 2em;
+    animation: verschijn 3s;
+}
+
+/* Code van DLO Internetstandaarden opdrachhten week 4 */
+@keyframes verschijn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+.turn {
+    animation: loop 4s ease-in-out;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* Code van DLO Internetstandaarden opdrachhten week 4 */
+@keyframes loop {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+a img:hover {
+    transform: scale(1.5);
+}
+
+.textdun {
+    background-color: rgb(200, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 0.5em ridge #ffffff;
+    border-radius: 10px;
+    border-width: 0.5em;
+    padding: 1em;
+    max-width: 20em;
+    margin: auto;
+}
+
+/* Code van https://developer.mozilla.org/en-US/docs/Web/CSS/:has */
+article:has( select) {
+    background-color: rgb(0, 129, 39);
+    color: rgb(255, 255, 255);
+    border: 0.5em ridge #ffffff;
+    border-radius: 10px;
+    border-width: 0.5em;
+    padding: 1em;
+    max-width: 30em;
+    margin: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+    text-align: center;
+}
+
+h2 {
+    margin: 2em 1em 1em 1em;
+    border-bottom: 1em rgb(255, 255, 255);
+}
+
+a {
+    color: rgb(200, 0, 0);
+}
+
+a:hover {
+    color: rgb(255, 166, 2);
+}
+
+/* Code van https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure */
+figure {
+    border: thin rgb(200, 0, 0) solid;
+    display: flex;
+    flex-flow: column;
+    padding: 0.5em;
+    max-width: 30%;
+    margin: auto;
+}
+
+/* Code van https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure */
+figcaption {
+    background-color: rgba(254, 254, 254, 0.847);
+    color: rgb(0, 0, 0);
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+
+.versies {
+    margin: 1em 1em 1em 1em;
+    max-width: fit-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.versies figure {
+    border: 0.3em #000000 solid;
+    padding: 0em;
+    margin: 1em 1em 1em 1em;
+    max-width: 250px;
+}
+
+blockquote {
+    font-size: xx-large;
+    max-width: 10%;
+    margin: auto;
+    text-align: center;
+    animation: verschijn 3s;
+}
+
+article p a {
+    color: black;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+article p a:hover {
+    color: #ffffff;
+    font-size: 22px;
+}
+
+/* Code van https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button */
+button {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 129, 39);
+    font-weight: bold;
+    border: 3px solid #000000;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 1em 1em 1em 1em;
+    justify-content: center;
+    text-align: center;
+    animation: float 1.5s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+button:hover {
+    color: rgb(0, 129, 39);
+    background-color: rgb(0, 0, 0);
+    border: 3px solid rgb(255, 255, 255);
+}
+
+/* Ciode van https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside */
+aside {
+    border: thin rgb(200, 0, 0) solid;
+    padding: 0em;
+    width: 250px;
+    margin: 2em;
+}
+
+aside h4 {
+    border-top: thin rgb(200, 0, 0) solid;
+    padding: 1em 1em 0em 1em;
+}
+
+footer {
+    margin-top: 4em;
+}
